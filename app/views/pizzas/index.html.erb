@@ -1,0 +1,117 @@
+
+    <!-- Header -->
+    <a name="home"></a>
+    <div class="intro-header">
+      <div class="bg-overlay">
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>pizza</h1>
+                        <h2 class="section-heading">Welcome To Your New Pizza Type Maintenance App</h2>
+                        <h3 id='h3-section-heading'>A tool for greater productivity</h3>
+                        <hr class="intro-divider">
+                        <!--
+                        <ul class="list-inline intro-social-buttons">
+                        -->
+                        <ul class="list-inline ">
+                            <li>
+                                <a href="#" target="_blank" class="btn btn-default btn-lg"> <span  class="network-name">Start A Free Trial</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+      </div>
+    </div>
+    <!-- /.intro-header -->
+
+ <!-- Page Content -->
+
+  <a  name="guest-book"></a>
+    <div class="content-section-a">
+      <div class="bg-overlay2">
+        <div class="container">
+
+
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading guest-book-section-heading">Pizza types</h2>
+                    </br>
+                    <p class="guest-book-lead">Maintain a list of the pizzas we sell</p>
+                    </br>
+
+
+                    <!-- table of pizzas  (name and price) -->
+                    <!--
+                        <table class="guest-book-form-table">
+                            <tr class="guest-book-form-row">
+                                <td class="guest-book-cell guest-book-form-col-label" align='right'><label for="name">Name</label></td>
+                                <td class="guest-book-cell"><input class="guest-book-input" type="input" name="name" /></td>
+                            </tr>
+                            <tr class="guest-book-form-row">
+                                <td class="guest-book-cell guest-book-form-col-label" align='right'><label for="email">Email</label></td>
+                                <td class="guest-book-cell"><input class="guest-book-input" type="input" name="email"  /></td>
+                            </tr>
+                            <tr class="guest-book-form-row">
+                                <td class="guest-book-cell guest-book-form-col-label" align='right'><label for="comments">Comments</label></td>
+                                <td class="guest-book-cell"><textarea name="comments" width=80%></textarea></td>
+                            </tr>
+                            <tr class="guest-book-form-row">
+                                <td class="guest-book-cell guest-book-create-button" align='right' colspan="2"><input  type="submit" name="submit" value="Create guest book entry" /></td>
+                            </tr>
+                        </table>
+                    -->
+                    </br>
+                    </br>
+                    </br>
+
+
+                    <!-- <hr> -->
+                    <div class="create-pizza-link">
+                      <%= link_to "Click here to create a pizza!", new_pizza_path %>
+                    </div>
+                    <!-- <hr> -->
+
+                    <!-- read only Pizza List -->
+                    <div id="table-wrapper">
+                    <div id="table-scroll">
+
+                        <table class="guest-book-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <% @pizzas.each do |pizza| %>
+
+                                  <tr class="guest-book-row">
+                                    <td class="guest-book-cell"><%= link_to pizza.name, pizza_path(pizza) %></td>
+                                    <td class="guest-book-cell"><%= pizza.price %></td>
+                                  </tr>
+                                <% end %>
+                            </tbody>
+                      </table>
+                    </div>
+                    </div>
+
+
+        </div>
+        <!-- /.container -->
+      </div>
+     </div>
+    </div>
+
+
+</div>
+</div>
+</div>
+<!-- /.banner -->

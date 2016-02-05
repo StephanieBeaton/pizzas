@@ -1,0 +1,18 @@
+
+<%= link_to "Back to all pizzas", pizzas_path %>
+<h2>Create a pizza!</h2>
+
+<!--  params[:pizza] = @pizza   in pizzas_contoller.rb/create  -->
+<%= form_for @pizza do |f| %>
+  <div>
+    <%= f.label "name" %><br>
+    <%= f.text_field "name" %>
+  </div>
+  <div>
+    <%= f.label "price" %><br>
+    <%= f.text_field "price" %>
+  </div>
+  <div>
+    <%= f.submit "Save" %>
+  </div>
+<% end %>

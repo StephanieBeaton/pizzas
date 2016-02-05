@@ -1,0 +1,8 @@
+<%= link_to "Back to all pizzas", pizzas_path %>
+<h2><%= @pizza.name %> (<%= link_to "edit", edit_pizza_path(@pizza) %>, <%= link_to "delete", pizza_path(@pizza), :method => :delete, :"data-confirm" => "You sure?" %>)</h2>
+<p><%= @pizza.price %></p>
+
+<% @toppings.each do |topping| %>
+
+  <p>topping name: <%= topping.name %></p>
+<% end %>

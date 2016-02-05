@@ -1,0 +1,9 @@
+<h1>Pizza Store</h1>
+<hr>
+<%= link_to "Create a pizza!", new_pizza_path %>
+<hr>
+<% @pizzas.each do |pizza| %>
+  <h2><%= link_to pizza.name, pizza_path(pizza) %></h2>
+  <p><%= pizza.price %></p>
+  <small>- <%= pizza.toppings %></small>
+<% end %>
