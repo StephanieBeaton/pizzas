@@ -208,10 +208,15 @@ h2.section-heading {
 
 .create-pizza-link {
   margin: 0 auto;
-  width: 20%;
+  width: 35%;
 }
 .create-pizza-link a{
   color: black;
+}
+.create-pizza-link p{
+  color: black;
+  font-size: 14px;
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 /* Vertical Scroll test */
 #table-wrapper {

@@ -1,24 +1,78 @@
-<%= link_to "Back to this pizza", pizza_path(@pizza) %>
-<h2>Edit this pizza</h2>
-<%= form_for @pizza do |f| %>
-  <div>
-    <%= f.label "name" %><br>
-    <%= f.text_field "name" %>
-  </div>
-  <div>
-    <%= f.label "price" %><br>
-    <%= f.text_field "price" %>
-  </div>
 
-  <% @toppings.each do |topping| %>
+ <!-- Page Content -->
 
-    <div>
-      <%= topping.name %> (<%= link_to "edit", edit_topping_path(topping) %>, <%= link_to "delete", topping_path(topping), :method => :delete, :"data-confirm" => "You sure?" %>)
+  <a  name="guest-book"></a>
+    <div class="content-section-a">
+      <div class="bg-overlay2">
+        <div class="container">
+
+
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading guest-book-section-heading">Create a pizza!</h2>
+                    </br>
+                    <p class="guest-book-lead">Maintain a list of the pizzas we sell</p>
+                    </br>
+
+
+                    <!-- table of pizzas  (name and price) -->
+                    <!--
+                        <table class="guest-book-form-table">
+                            <tr class="guest-book-form-row">
+                                <td class="guest-book-cell guest-book-form-col-label" align='right'><label for="name">Name</label></td>
+                                <td class="guest-book-cell"><input class="guest-book-input" type="input" name="name" /></td>
+                            </tr>
+                            <tr class="guest-book-form-row">
+                                <td class="guest-book-cell guest-book-form-col-label" align='right'><label for="email">Email</label></td>
+                                <td class="guest-book-cell"><input class="guest-book-input" type="input" name="email"  /></td>
+                            </tr>
+                            <tr class="guest-book-form-row">
+                                <td class="guest-book-cell guest-book-form-col-label" align='right'><label for="comments">Comments</label></td>
+                                <td class="guest-book-cell"><textarea name="comments" width=80%></textarea></td>
+                            </tr>
+                            <tr class="guest-book-form-row">
+                                <td class="guest-book-cell guest-book-create-button" align='right' colspan="2"><input  type="submit" name="submit" value="Create guest book entry" /></td>
+                            </tr>
+                        </table>
+                    -->
+                    </br>
+                    </br>
+                    </br>
+
+
+                    <%= link_to "Back to this pizza", pizza_path(@pizza) %>
+                    <h2>Edit this pizza</h2>
+                    <%= form_for @pizza do |f| %>
+                          <div>
+                            <%= f.label "name" %><br>
+                            <%= f.text_field "name" %>
+                          </div>
+                          <div>
+                            <%= f.label "price" %><br>
+                            <%= f.text_field "price" %>
+                          </div>
+
+                          <% @toppings.each do |topping| %>
+
+                            <div>
+                              <%= topping.name %> (<%= link_to "edit", edit_topping_path(topping) %>, <%= link_to "delete", topping_path(topping), :method => :delete, :"data-confirm" => "You sure?" %>)
+                            </div>
+
+                          <% end %>
+
+                          <div>
+                            <%= f.submit "Save" %>
+                          </div>
+
+                    <% end %>
+        </div>
+        <!-- /.container -->
+      </div>
+     </div>
     </div>
 
-  <% end %>
 
-  <div>
-    <%= f.submit "Save" %>
-  </div>
-<% end %>
+</div>
+</div>
+</div>
+<!-- /.banner -->
+
