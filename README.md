@@ -36,4 +36,9 @@ http://localhost:3000
 bin/rake   routes
 
 // you can add, delete pizzas
+// ... and delete the toppings
+
+//  WARNING :   the controller for the toppings is not yet written
+
+
 
